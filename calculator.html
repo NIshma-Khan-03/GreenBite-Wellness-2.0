@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GreenBite - Healthy Living Made Simple</title>
+
+        <link rel="manifest" href="manifest.json">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/calculator.css">
+        <link rel="stylesheet" href="css/animation.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="GreenBite Logo" class="logo-img">
+                        <h2>GreenBite</h2>
+                    </div>
+                    
+
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="calculator.html" class="active">Calculator</a></li>
+                        <li><a href="workout.html">Workout</a></li>
+                        <li><a href="mindfulness.html">Mindfulness</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    
+
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <main>
+
+            <section class="page-header">
+                <div class="container">
+                    <h1>📊 Calorie & Nutrition Calculator</h1>
+                    <p>Calculate your daily caloric needs and macro breakdown</p>
+                </div>
+            </section>
+
+
+            <section class="calculator-section">
+                <div class="container">
+                    <div class="calculator-wrapper">
+
+                        <div class="calculator-form">
+                            <h2>📝 Enter Your Details</h2>
+                            <form id="calorie-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="age">Age (years):</label>
+                                        <input type="number" id="age" min="15" max="100" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="gender">Gender:</label>
+                                        <select id="gender" required>
+                                            <option value="">Choose Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="height">Height (cm):</label>
+                                        <input type="number" id="height" min="120" max="250" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="weight">Weight (kg):</label>
+                                        <input type="number" id="weight" min="30" max="200" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="activity">Activity Level:</label>
+                                    <select id="activity" required>
+                                        <option value="">Choose Activity Level</option>
+                                        <option value="1.2">Sedentary (little or no exercise)</option>
+                                        <option value="1.375">Lightly active (light exercise 1-3 days/week)</option>
+                                        <option value="1.55">Moderately active (moderate exercise 3-5 days/week)</option>
+                                        <option value="1.725">Very active (hard exercise 6-7 days/week)</option>
+                                        <option value="1.9">Super active (very hard exercise/physical job)</option>
+                                    </select>
+                                </div>
+                                
+                                <button type="submit" class="calculate-btn">Calculate My Needs 🚀</button>
+                            </form>
+                        </div>
+                        
+
+                        <div class="calculator-results" id="results-section" style="display: none;">
+                            <h2>🎯 Your Results</h2>
+                            
+                            <div class="result-card bmr-card">
+                                <div class="result-icon">
+                                    <img src="images/bmr-icon.jpg" alt="BMR">
+                                </div>
+                                <div class="result-info">
+                                    <h3>BMR (Basal Metabolic Rate)</h3>
+                                    <p class="result-number" id="bmr-result">0</p>
+                                    <p class="result-description">Calories burned at rest</p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-card tdee-card">
+                                <div class="result-icon">
+                                    <img src="images/tdee-icon.jpg" alt="TDEE">
+                                </div>
+                                <div class="result-info">
+                                    <h3>TDEE (Total Daily Energy)</h3>
+                                    <p class="result-number" id="tdee-result">0</p>
+                                    <p class="result-description">Total calories needed per day</p>
+                                </div>
+                            </div>
+                            
+                            <div class="macros-section">
+                                <h3>🍎 Macronutrient Breakdown</h3>
+                                <p class="macro-description">Based on a healthy ratio: 50% Carbs, 20% Protein, 30% Fat</p>
+                                
+                                <div class="macro-cards">
+                                    <div class="macro-card carbs">
+                                        <div class="macro-header">
+                                            <img src="images/carbs-icon.jpg" alt="Carbs" class="macro-icon">
+                                            <h4>Carbohydrates</h4>
+                                        </div>
+                                        <div class="macro-amount" id="carbs-grams">0g</div>
+                                        <div class="macro-bar">
+                                            <div class="macro-fill carbs-fill" id="carbs-bar"></div>
+                                        </div>
+                                        <div class="macro-percentage">50%</div>
+                                    </div>
+                                    
+                                    <div class="macro-card protein">
+                                        <div class="macro-header">
+                                            <img src="images/protein-icon.jpg" alt="Protein" class="macro-icon">
+                                            <h4>Protein</h4>
+                                        </div>
+                                        <div class="macro-amount" id="protein-grams">0g</div>
+                                        <div class="macro-bar">
+                                            <div class="macro-fill protein-fill" id="protein-bar"></div>
+                                        </div>
+                                        <div class="macro-percentage">20%</div>
+                                    </div>
+                                    
+                                    <div class="macro-card fat">
+                                        <div class="macro-header">
+                                            <img src="images/fat-icon.jpg" alt="Fat" class="macro-icon">
+                                            <h4>Healthy Fats</h4>
+                                        </div>
+                                        <div class="macro-amount" id="fat-grams">0g</div>
+                                        <div class="macro-bar">
+                                            <div class="macro-fill fat-fill" id="fat-bar"></div>
+                                        </div>
+                                        <div class="macro-percentage">30%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tips-section">
+                                <h3>💡 Personalized Tips</h3>
+                                <div class="tip-cards" id="personal-tips">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="images/logo.png" alt="GreenBite Logo" class="footer-logo-img">
+                            <h3>GreenBite</h3>
+                        </div>
+                        <p>Your journey to healthy living starts here.</p>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="recipes.html">Recipes</a></li>
+                            <li><a href="calculator.html">Calculator</a></li>
+                            <li><a href="workout.html">Workouts</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <img src="images/instagram-icon.png" alt="Instagram" class="social-icon">
+                            <img src="images/facebook-icon.png" alt="Facebook" class="social-icon">
+                            <img src="images/twitter-icon.png" alt="Twitter" class="social-icon">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 GreenBite. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="javascript/main.js"></script>
+        <script src="javascript/calculator.js"></script>
+        
+    </body>
+</html>

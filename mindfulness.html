@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mindfulness - GreenBite</title>
+
+        <link rel="manifest" href="manifest.json">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/mindfulness.css">
+        <link rel="stylesheet" href="css/animations.css">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header - Same as other pages -->
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="GreenBite Logo" class="logo-img">
+                        <h2>GreenBite</h2>
+                    </div>
+                    
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <li><a href="workout.html">Workout</a></li>
+                        <li><a href="mindfulness.html" class="active">Mindfulness</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Page Header -->
+            <section class="page-header mindfulness-header">
+                <div class="header-background">
+                    <img src="images/mindfulness-landscape.jpg" alt="Peaceful Nature Scene" class="header-bg-img">
+                </div>
+                <div class="container header-content">
+                    <h1>🧘‍♀️ Mindfulness & Meditation</h1>
+                    <p>Take a moment to breathe, relax, and find your inner peace</p>
+                </div>
+            </section>
+
+            <!-- Mindfulness Content -->
+            <section class="mindfulness-section">
+                <div class="container">
+                    <!-- Breathing Exercise -->
+                    <div class="mindfulness-card">
+                        <h2>🌸 Breathing Exercise</h2>
+                        <p>Follow the circle to breathe in and out slowly</p>
+                        
+                        <div class="breathing-container">
+                            <div class="breathing-circle" id="breathing-circle">
+                                <div class="breathing-text" id="breathing-text">Click to Start</div>
+                            </div>
+                            <button id="breathing-btn" class="mindfulness-btn">Start Breathing</button>
+                        </div>
+                    </div>
+
+                    <!-- Meditation Timer -->
+                    <div class="mindfulness-card">
+                        <h2>⏰ Meditation Timer</h2>
+                        <p>Set a timer for your meditation session</p>
+                        
+                        <div class="timer-container">
+                            <div class="timer-display" id="meditation-timer">05:00</div>
+                            <div class="timer-buttons">
+                                <button class="timer-preset" data-minutes="5">5 min</button>
+                                <button class="timer-preset" data-minutes="10">10 min</button>
+                                <button class="timer-preset" data-minutes="15">15 min</button>
+                            </div>
+                            <div class="timer-controls">
+                                <button id="start-meditation" class="mindfulness-btn">Start</button>
+                                <button id="pause-meditation" class="mindfulness-btn" style="display: none;">Pause</button>
+                                <button id="reset-meditation" class="mindfulness-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ambient Sounds -->
+                    <div class="mindfulness-card">
+                        <h2>🎵 Relaxing Sounds</h2>
+                        <p>Click to play peaceful background sounds</p>
+                        
+                        <div class="sounds-container">
+                            <div class="sound-option" data-sound="rain">
+                                <div class="sound-icon">🌧️</div>
+                                <div class="sound-name">Rain</div>
+                                <button class="sound-btn" data-sound="rain">Play</button>
+                            </div>
+                            
+                            <div class="sound-option" data-sound="ocean">
+                                <div class="sound-icon">🌊</div>
+                                <div class="sound-name">Ocean</div>
+                                <button class="sound-btn" data-sound="ocean">Play</button>
+                            </div>
+                            
+                            <div class="sound-option" data-sound="forest">
+                                <div class="sound-icon">🌲</div>
+                                <div class="sound-name">Forest</div>
+                                <button class="sound-btn" data-sound="forest">Play</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Session Counter -->
+                    <div class="mindfulness-card">
+                        <h2>✨ Today's Progress</h2>
+                        <div class="progress-container">
+                            <div class="progress-stat">
+                                <div class="stat-number" id="sessions-today">0</div>
+                                <div class="stat-label">Sessions Completed</div>
+                            </div>
+                            <div class="progress-stat">
+                                <div class="stat-number" id="minutes-today">0</div>
+                                <div class="stat-label">Minutes Meditated</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="images/logo.png" alt="GreenBite Logo" class="footer-logo-img">
+                            <h3>GreenBite</h3>
+                        </div>
+                        <p>Your journey to healthy living starts here.</p>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="recipes.html">Recipes</a></li>
+                            <li><a href="calculator.html">Calculator</a></li>
+                            <li><a href="workout.html">Workouts</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <img src="images/instagram-icon.png" alt="Instagram" class="social-icon">
+                            <img src="images/facebook-icon.png" alt="Facebook" class="social-icon">
+                            <img src="images/twitter-icon.png" alt="Twitter" class="social-icon">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 GreenBite. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="javascript/main.js"></script>
+        <script src="javascript/mindfulness.js"></script>
+        
+    </body>
+</html>

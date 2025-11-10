@@ -1,0 +1,43 @@
+{
+    "name": "GreenBite Wellness",
+    "short name": "GreenBite",
+    "description": "Your wellness companion for healthy living through balanced meals, exercise, and mindfulness",
+    "start_url": "/",
+    "display": "standalne",
+    "background_color": "#F1F8E9",
+    "theme_color": "#4CAF50",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "icons/icon-192.png",
+            "size": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+
+        {
+            "src": "icons/icon-512.png",
+            "size": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+
+    "categories": ["health", "lifestyle", "fitness"],
+    "screenshots": [
+        {
+            "src": "images/screenshot-desktop.png",
+            "sizes": "1280x1280",
+            "type": "image/png",
+            "platform": "wide"
+        },
+
+        {
+            "src": "images/screenshot-mobile.png",
+            "sizes": "750x750",
+            "type": "image/png",
+            "platform": "narrow"
+        }
+    ]
+
+}

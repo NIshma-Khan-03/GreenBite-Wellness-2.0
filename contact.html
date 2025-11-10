@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us - GreenBite</title>
+
+        <link rel="manifest" href="manifest.json">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/animations.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="GreenBite Logo" class="logo-img">
+                        <h2>GreenBite</h2>
+                    </div>
+                    
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <li><a href="workout.html">Workout</a></li>
+                        <li><a href="mindfulness.html">Mindfulness</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                    
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Page Header -->
+            <section class="page-header">
+                <div class="container">
+                    <h1>📧 Contact & Feedback</h1>
+                    <p>We'd love to hear from you! Send us your feedback or questions</p>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact-section">
+                <div class="container">
+                    <div class="contact-wrapper">
+                        <!-- Contact Form -->
+                        <div class="contact-form-container">
+                            <h2>💬 Send us a Message</h2>
+                            <form id="contact-form" class="contact-form">
+                                <div class="form-group">
+                                    <label for="contact-name">Your Name:</label>
+                                    <input type="text" id="contact-name" placeholder="Enter your full name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-email">Your Email:</label>
+                                    <input type="email" id="contact-email" placeholder="Enter your email address" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-subject">Subject:</label>
+                                    <select id="contact-subject" required>
+                                        <option value="">Choose a subject</option>
+                                        <option value="general">General Question</option>
+                                        <option value="feedback">Website Feedback</option>
+                                        <option value="recipe">Recipe Suggestion</option>
+                                        <option value="technical">Technical Issue</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-message">Your Message:</label>
+                                    <textarea id="contact-message" rows="5" placeholder="Tell us what's on your mind..." required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn">Send Message 📨</button>
+                            </form>
+                            
+                            <div id="contact-success" class="success-message" style="display: none;">
+                                <h3>🎉 Message Sent Successfully!</h3>
+                                <p>Thank you for contacting us! We'll get back to you within 24 hours.</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="contact-info">
+                            <h2>🌸 Get in Touch</h2>
+                            
+                            <div class="info-card">
+                                <div class="info-icon">📍</div>
+                                <div class="info-content">
+                                    <h3>Visit Us</h3>
+                                    <p>123 Wellness Street<br>Healthy City, HC 12345<br>Green Valley</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="info-icon">📞</div>
+                                <div class="info-content">
+                                    <h3>Call Us</h3>
+                                    <p>+1 (555) 123-BITE<br>Monday - Friday: 9AM - 6PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="info-icon">✉️</div>
+                                <div class="info-content">
+                                    <h3>Email Us</h3>
+                                    <p>hello@greenbite.com<br>support@greenbite.com</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Simple Map -->
+                            <div class="map-container">
+                                <h3>📍 Find Us Here</h3>
+                                <div class="simple-map">
+                                    <iframe 
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9476519598093!2d-74.00594!3d40.7589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316e0da7c9%3A0x6b4d86c7b2e5b8d4!2sNew%20York%20City!5e0!3m2!1sen!2sus!4v1640000000000!5m2!1sen!2sus" 
+                                        width="100%" 
+                                        height="200" 
+                                        style="border:0; border-radius: 15px;" 
+                                        allowfullscreen="" 
+                                        loading="lazy">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div class="faq-section">
+                        <h2>❓ Frequently Asked Questions</h2>
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <div class="faq-question" data-faq="1">
+                                    <span>What is GreenBite all about?</span>
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer" id="faq-1">
+                                    <p>GreenBite is your one-stop wellness platform! We help you maintain a healthy lifestyle through nutritious recipes, fitness guidance, calorie tracking, and mindfulness practices. Our goal is to make healthy living simple, accessible, and enjoyable for everyone.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question" data-faq="2">
+                                    <span>How accurate is the calorie calculator?</span>
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer" id="faq-2">
+                                    <p>Our calorie calculator uses scientifically proven formulas (Mifflin-St Jeor equation) to estimate your BMR and TDEE. While it provides a good starting point, individual needs may vary based on genetics, health conditions, and other factors. Always consult with a healthcare professional for personalized advice.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question" data-faq="3">
+                                    <span>Are the recipes suitable for special diets?</span>
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer" id="faq-3">
+                                    <p>Our recipes focus on wholesome, nutritious ingredients and can be adapted for various dietary needs. Many are naturally vegetarian-friendly, and we provide ingredient lists so you can easily modify recipes to suit allergies, intolerances, or specific diet plans like vegan, gluten-free, or keto.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question" data-faq="4">
+                                    <span>Can I use the workout generator if I'm a beginner?</span>
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer" id="faq-4">
+                                    <p>Absolutely! Our workout generator includes options for all fitness levels. Choose bodyweight exercises if you're just starting out, and always listen to your body. Start with shorter sessions and gradually increase intensity. If you have any health concerns, please consult with a healthcare provider before starting any new exercise routine.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question" data-faq="5">
+                                    <span>Is my personal information safe on GreenBite?</span>
+                                    <span class="faq-toggle">+</span>
+                                </div>
+                                <div class="faq-answer" id="faq-5">
+                                    <p>Your privacy is important to us! All personal data you enter (like your measurements for the calorie calculator) is stored locally on your device and never sent to external servers. We only collect basic information like newsletter subscriptions, which we handle securely and never share with third parties.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="images/logo.png" alt="GreenBite Logo" class="footer-logo-img">
+                            <h3>GreenBite</h3>
+                        </div>
+                        <p>Your journey to healthy living starts here.</p>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="recipes.html">Recipes</a></li>
+                            <li><a href="calculator.html">Calculator</a></li>
+                            <li><a href="workout.html">Workouts</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <img src="images/instagram-icon.png" alt="Instagram" class="social-icon">
+                            <img src="images/facebook-icon.png" alt="Facebook" class="social-icon">
+                            <img src="images/twitter-icon.png" alt="Twitter" class="social-icon">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 GreenBite. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="javascript/main.js"></script>
+        <script src="javascript/contact.js"></script>
+
+    </body>
+</html>

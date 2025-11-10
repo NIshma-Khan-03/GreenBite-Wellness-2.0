@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GreenBite - Healthy Living Made Simple</title>
+
+        <link rel="manifest" href="manifest.json">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/recipes.css">
+        <link rel="stylesheet" href="css/animation.css">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="GreenBite Logo" class="logo-img">
+                        <h2>GreenBite</h2>
+                    </div>
+                    
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html" class="active">Recipes</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <li><a href="workout.html">Workout</a></li>
+                        <li><a href="mindfulness.html">Mindfulness</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <main>
+
+            <section class="page-header">
+                <div class="container">
+                    <h1>🍽️ Healthy Recipes</h1>
+                    <p>Discover delicious and nutritious recipes for every meal!</p>
+                </div>
+            </section>
+
+
+            <section class="recipe-controls">
+                <div class="container">
+                    <div class="search-filter">
+                        <input type="text" id="recipe-search" placeholder="Search recipes..." class="search-box">
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" onclick="filterRecipes('all')">All</button>
+                            <button class="filter-btn" onclick="filterRecipes('breakfast')">Breakfast</button>
+                            <button class="filter-btn" onclick="filterRecipes('lunch')">Lunch</button>
+                            <button class="filter-btn" onclick="filterRecipes('dinner')">Dinner</button>
+                            <button class="filter-btn" onclick="filterRecipes('snacks')">Snacks</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="recipes-section">
+                <div class="container">
+                    <div class="recipes-grid" id="recipes-container">
+                        
+
+                        <div class="recipe-card" data-category="breakfast" onclick="showRecipe('smoothie')">
+                            <img src="images/smoothie.jpg" alt="Green Power Smoothie" class="recipe-image">
+                            <div class="recipe-info">
+                                <h3 class="recipe-title">Green Power Smoothie</h3>
+                                <p class="recipe-description">A refreshing and energizing smoothie packed with spinach, banana, and tropical fruits.</p>
+                                <div class="recipe-meta">
+                                    <span class="recipe-category">breakfast</span>
+                                    <span>⏱️ 250 cal</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="recipe-card" data-category="lunch" onclick="showRecipe('salad')">
+                            <img src="images/green-salad.jpg" alt="Fresh Garden Salad" class="recipe-image">
+                            <div class="recipe-info">
+                                <h3 class="recipe-title">Fresh Garden Salad</h3>
+                                <p class="recipe-description">A crisp and colorful salad with mixed greens, cherry tomatoes, and a light vinaigrette.</p>
+                                <div class="recipe-meta">
+                                    <span class="recipe-category">lunch</span>
+                                    <span>⏱️ 180 cal</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="recipe-card" data-category="dinner" onclick="showRecipe('noodles')">
+                            <img src="images/healthy-noodles.jpg" alt="Healthy Noodles Bowl" class="recipe-image">
+                            <div class="recipe-info">
+                                <h3 class="recipe-title">Healthy Noodles Bowl</h3>
+                                <p class="recipe-description">Comforting noodle soup with vegetables and lean protein, inspired by wholesome Japanese cuisine.</p>
+                                <div class="recipe-meta">
+                                    <span class="recipe-category">dinner</span>
+                                    <span>⏱️ 320 cal</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="recipe-card" data-category="snacks" onclick="showRecipe('cake')">
+                            <img src="images/cake.jpg" alt="Healthy Vanilla Cake" class="recipe-image">
+                            <div class="recipe-info">
+                                <h3 class="recipe-title">Healthy Vanilla Cake</h3>
+                                <p class="recipe-description">A light and fluffy cake made with wholesome ingredients and natural sweeteners.</p>
+                                <div class="recipe-meta">
+                                    <span class="recipe-category">snacks</span>
+                                    <span>⏱️ 220 cal</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="recipe-card" data-category="breakfast" onclick="showRecipe('avocado')">
+                            <img src="images/avocado-toast.jpg" alt="Perfect Avocado Toast" class="recipe-image">
+                            <div class="recipe-info">
+                                <h3 class="recipe-title">Perfect Avocado Toast</h3>
+                                <p class="recipe-description">Creamy avocado on toasted whole grain bread with a squeeze of lime and everything seasoning.</p>
+                                <div class="recipe-meta">
+                                    <span class="recipe-category">breakfast</span>
+                                    <span>⏱️ 280 cal</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="recipe-card" data-category="lunch" onclick="showRecipe('chicken')">
+                            <img src="images/chicken-wrap.jpg" alt="Grilled Chicken Wrap" class="recipe-image">
+                            <div class="recipe-info">
+                                <h3 class="recipe-title">Grilled Chicken Wrap</h3>
+                                <p class="recipe-description">Protein-packed wrap with seasoned grilled chicken, fresh vegetables, and creamy Greek yogurt.</p>
+                                <div class="recipe-meta">
+                                    <span class="recipe-category">lunch</span>
+                                    <span>⏱️ 340 cal</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="recipe-details" id="recipe-details" style="display: none;">
+                <div class="container">
+                    <div class="details-card">
+                        <button onclick="hideRecipe()" class="back-btn">← Back to Recipes</button>
+                        <div class="details-content">
+                            <h2 id="details-title">Recipe Title</h2>
+                            <p id="details-description">Recipe description</p>
+                            
+                            <div class="details-grid">
+                                <div class="details-section">
+                                    <h3>📋 Ingredients:</h3>
+                                    <ul id="details-ingredients">
+                                    </ul>
+                                </div>
+                                
+                                <div class="details-section">
+                                    <h3>👩‍🍳 Instructions:</h3>
+                                    <ol id="details-instructions">
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="nutrition-info">
+                                <h3>📊 Nutrition Info:</h3>
+                                <div class="nutrition-grid">
+                                    <div class="nutrition-item">
+                                        <strong>Calories:</strong> <span id="nutrition-calories">-</span>
+                                    </div>
+                                    <div class="nutrition-item">
+                                        <strong>Protein:</strong> <span id="nutrition-protein">-</span>
+                                    </div>
+                                    <div class="nutrition-item">
+                                        <strong>Carbs:</strong> <span id="nutrition-carbs">-</span>
+                                    </div>
+                                    <div class="nutrition-item">
+                                        <strong>Fat:</strong> <span id="nutrition-fat">-</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="images/logo.png" alt="GreenBite Logo" class="footer-logo-img">
+                            <h3>GreenBite</h3>
+                        </div>
+                        <p>Your journey to healthy living starts here.</p>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="recipes.html">Recipes</a></li>
+                            <li><a href="calculator.html">Calculator</a></li>
+                            <li><a href="workout.html">Workouts</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <img src="images/instagram-icon.png" alt="Instagram" class="social-icon">
+                            <img src="images/facebook-icon.png" alt="Facebook" class="social-icon">
+                            <img src="images/twitter-icon.png" alt="Twitter" class="social-icon">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 GreenBite. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="javascript/main.js"></script>
+        <script src="javascript/recipes.js"></script>
+
+    </body>
+
+</html>

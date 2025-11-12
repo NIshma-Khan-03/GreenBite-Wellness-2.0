@@ -211,3 +211,50 @@
     border: 2px solid #A5D6A7;
     margin-top: 20px;
 }
+
+.nutrition-info h3 {
+    color: #2E7D32;
+    margin-bottom: 20px;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.nutrition-item {
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #A5D6A7;
+}
+
+.nutrition-item string {
+    color: #2E7D32;
+}
+
+.nutrition-item span {
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+
+/* mobile responsive */
+@media (max-width: 768px) {
+    .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-card {
+        padding: 25px;
+    }
+
+    .details-content h2 {
+        font-size: 2rem;
+    }
+}

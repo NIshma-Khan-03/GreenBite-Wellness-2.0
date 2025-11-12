@@ -101,7 +101,9 @@ body {
     background: #4CAF50;
     margin: 3px 0;
     border-radius: 2px;
+    transition: 0.3s;
 }
+
 
 /* ==========================================
    MAIN CONTENT

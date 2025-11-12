@@ -201,3 +201,13 @@
     line-height: 1.6;
 }
 
+
+
+/* nutrient infor chart */
+.nutrition-info {
+    background: #E8F5E9;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #A5D6A7;
+    margin-top: 20px;
+}
